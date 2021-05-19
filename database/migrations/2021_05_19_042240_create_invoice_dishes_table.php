@@ -14,11 +14,11 @@ class CreateInvoiceDishesTable extends Migration
     public function up()
     {
         Schema::create('invoice_dishes', function (Blueprint $table) {
-            $table->foreignId('invoice_id');
-            $table->foreignId('dish_id');
+            $table->foreignId('invoice_id')->constrained();
+            $table->foreignId('dish_id')->constrained();
             $table->primary(['invoice_id', 'dish_id']);
             $table->integer('quantity')->default(0);
-            $table->double('price');
+            $table->double('price')->default(0);
             $table->timestamps();
         });
     }
