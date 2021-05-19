@@ -16,6 +16,8 @@ class Invoice extends Model
      */
     protected $fillable = [
         'user_id',
+        'table_id',
+        'status',
     ];
 
     /**
@@ -24,6 +26,14 @@ class Invoice extends Model
     public function user()
     {
         return $this->hasOne(User::class);
+    }
+
+    /**
+     * Get table information
+     */
+    public function table()
+    {
+        return $this->hasOne(Table::class);
     }
 
     /**

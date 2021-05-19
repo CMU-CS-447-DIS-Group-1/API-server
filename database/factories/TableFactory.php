@@ -2,19 +2,18 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
 use App\Models\Table;
-use App\Models\Invoice;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class InvoiceFactory extends Factory
+class TableFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Invoice::class;
+    protected $model = Table::class;
 
     /**
      * Define the model's default state.
@@ -24,9 +23,8 @@ class InvoiceFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::inRandomOrder()->value('id'),
-            'table_id' => Table::inRandomOrder()->value('id'),
-            'status' => 1,
+            'code' => Str::random(10),
+            'status' => 0,
         ];
     }
 }
