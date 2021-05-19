@@ -45,7 +45,7 @@ php artisan migrate --seed
 ```
 
 **Notes**
-After update new code from the repo, if you want to reinstall / refresh the database and seed data, run the command below
+if you want to reinstall / refresh the database and seed data, run the command below
 
 ```bash
 php artisan migrate:refresh --seed
@@ -64,3 +64,7 @@ php artisan serve
 - If you are not, then your website will be at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - You can login with the following account:
   - Not available yet
+
+## KNOWN BUG(S)
+
+- Run seed command sometime return error alert about existed primary key. Just run the command again until it work.
