@@ -44,6 +44,12 @@ npm run dev
 php artisan migrate --seed
 ```
 
+- Run the command below to generate key
+
+```bash
+php artisan key:generate
+```
+
 **Notes**
 if you want to reinstall / refresh the database and seed data, run the command below
 
