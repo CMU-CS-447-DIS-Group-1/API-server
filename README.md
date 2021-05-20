@@ -16,6 +16,7 @@
 ## How to install
 
 First, you need to open your terminal at the project path
+**Do all to use this!!!**
 
 ### Install dependencies
 
@@ -69,8 +70,8 @@ php artisan serve
 - If you are using Laragon, then your website will be at [localhost](http://localhost) or [projectfolder.test](projectname.test)
 - If you are not, then your website will be at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - You can login with the following account:
-  - Not available yet
+  - email: can get after seed | password: password
 
 ## KNOWN BUG(S)
 
-- Run seed command sometime return error alert about existed primary key. Just run the command again until it work.
+- Run seed command sometime return error alert about existed primary key. Just run the command [here](#configuration) until it work.
