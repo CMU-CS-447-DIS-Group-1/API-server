@@ -21,6 +21,7 @@ class AuthController extends Controller
             $output = [
                 'code' => 1,
                 'api_token' => $api_token,
+                'user_info' => Auth::user(),
             ];
         }
 
