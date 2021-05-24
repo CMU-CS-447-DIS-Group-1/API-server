@@ -32,15 +32,21 @@ class DishController extends Controller
     public function store(Request $request)
     {
         $request = $request->only('name', 'price', 'description');
-        $data = Dish::create([
-            'name' => $request['name'],
-            'price' => $request['price'],
-            'description' => $request['description'],
-        ]);
+        if (isset($request['name']) && isset($request['price'])) {
+            $data = Dish::create([
+                'name' => $request['name'],
+                'price' => $request['price'],
+                'description' => $request['description'],
+            ]);
+
+            return json_encode([
+                'code' => 1,
+                'data' => $data,
+            ]);
+        }
 
         return json_encode([
-            'code' => 1,
-            'data' => $data,
+            'code' => 0,
         ]);
     }
 
@@ -53,10 +59,15 @@ class DishController extends Controller
     public function show($id)
     {
         $dish = Dish::find($id);
+        if ($dish != null) {
+            return json_encode([
+                'code' => $dish != null,
+                'data' => $dish,
+            ]);
+        }
 
         return json_encode([
-            'code' => $dish != null,
-            'data' => $dish,
+            'code' => 0,
         ]);
     }
 
