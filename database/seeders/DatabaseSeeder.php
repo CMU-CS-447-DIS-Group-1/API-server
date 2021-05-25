@@ -13,7 +13,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(1)->create([
+            'email' => 'example@example.org',
+            'api_token' => 'ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn',
+        ]);
+        \App\Models\User::factory(9)->create();
         $this->call([
             DishSeeder::class,
             TableSeeder::class,
