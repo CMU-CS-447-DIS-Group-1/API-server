@@ -7,8 +7,20 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+/**
+ * @group Auth API
+ *
+ * API for login, logout
+ */
 class AuthController extends Controller
 {
+    /**
+     * Login API
+     *
+     * @unauthenticated
+     * @queryParam email string required. Example: example@example.org
+     * @queryParam password string required. Example: password
+     */
     public function login(Request $request)
     {
         $request = $request->only('email', 'password');
@@ -28,6 +40,11 @@ class AuthController extends Controller
         return json_encode($output);
     }
 
+    /**
+     * Logout API
+     *
+     * @return void
+     */
     public function logout()
     {
         $output['code'] = 0;

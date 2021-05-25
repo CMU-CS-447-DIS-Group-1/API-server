@@ -6,6 +6,9 @@ use App\Models\Dish;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
+/**
+ * @group Dish API
+ */
 class DishController extends Controller
 {
     /**
@@ -26,6 +29,9 @@ class DishController extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @queryParam name string Name of dish
+     * @queryParam price double Price of dish
+     * @queryParam description Description of dish
      * @param  \Illuminate\Http\Request    $request
      * @return \Illuminate\Http\Response
      */
@@ -53,6 +59,7 @@ class DishController extends Controller
     /**
      * Display the specified resource.
      *
+     * @urlParam dish int required Id of dish. Example: 1
      * @param  int                         $id
      * @return \Illuminate\Http\Response
      */
@@ -74,18 +81,42 @@ class DishController extends Controller
     /**
      * Update the specified resource in storage.
      *
+     * @urlParam dish int Id of dish. Example: 1
+     * @queryParam name string required Name of dish
+     * @queryParam price double required Price of dish
+     * @queryParam description Description of dish
      * @param  \Illuminate\Http\Request    $request
      * @param  int                         $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
-        //
+        $request = $request->only('name', 'price', 'description');
+        if (isset($request['name']) && isset($request['price'])) {
+            $data = Dish::create([
+                'name' => $request['name'],
+                'price' => $request['price'],
+                'description' => $request['description'],
+            ]);
+
+            return json_encode([
+                'code' => 1,
+                'data' => $data,
+            ]);
+        }
+
+        return json_encode([
+            'code' => 0,
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
+     * @urlParam dish int Id of dish. Example: 1
+     * @response 200 {
+     *  "code": 1
+     * }
      * @param  int                         $id
      * @return \Illuminate\Http\Response
      */
