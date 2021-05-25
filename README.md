@@ -51,8 +51,15 @@ php artisan migrate --seed
 php artisan key:generate
 ```
 
-**Notes**
-if you want to reinstall / refresh the database and seed data, run the command below
+### After pulled, updated code
+
+- Run the command below if have any change in composer ("composer: ..." commit)
+
+```bash
+composer update
+```
+
+- If you want to reinstall / refresh the database and seed data, run the command below
 
 ```bash
 php artisan migrate:refresh --seed
@@ -70,7 +77,9 @@ php artisan serve
 - If you are using Laragon, then your website will be at [localhost](http://localhost) or [projectfolder.test](projectname.test)
 - If you are not, then your website will be at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - You can login with the following account:
-  - email: can get after seed | password: password
+  - email: example@example.org | password: password
+
+- For API document, go to [projectfolder.test/docs](projectname.test/docs)
 
 ## KNOWN BUG(S)
 
