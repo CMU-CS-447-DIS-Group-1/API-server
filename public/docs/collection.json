@@ -1,0 +1,636 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "restaurant-api.test"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "01af0f60-300d-44aa-ac6b-bea1d8e9f6fe",
+        "description": "API document for Restaurant Manamgement System",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth API",
+            "description": "\nAPI for login, logout",
+            "item": [
+                {
+                    "name": "Login API",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [
+                                {
+                                    "key": "email",
+                                    "value": "example%40example.org",
+                                    "description": "required.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "password",
+                                    "description": "required.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login?email=example%40example.org&password=password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Login API Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/login",
+                                    "query": [
+                                        {
+                                            "key": "email",
+                                            "value": "example%40example.org",
+                                            "description": "required.",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "password",
+                                            "value": "password",
+                                            "description": "required.",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/login?email=example%40example.org&password=password"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"code\": 1,\n    \"api_token\": \"ywa0uHEnxLPMSZO71A8AQv1p3KbJ6z1Hfz1WtQScNbz2HjfD9GOA61kuniie\",\n    \"user_info\": {\n        \"id\": 1,\n        \"name\": \"Kiara Marvin MD\",\n        \"email\": \"example@example.org\",\n        \"level\": 0,\n        \"api_token\": \"ywa0uHEnxLPMSZO71A8AQv1p3KbJ6z1Hfz1WtQScNbz2HjfD9GOA61kuniie\",\n        \"created_at\": \"2021-05-25T13:34:54.000000Z\",\n        \"updated_at\": \"2021-05-25T13:34:57.000000Z\"\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Logout API",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Logout API Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/logout",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/logout"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"code\": 1\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Dish API",
+            "description": "",
+            "item": [
+                {
+                    "name": "Display a listing of the resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dishes",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/dishes"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Display a listing of the resource. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/dishes",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/dishes"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"code\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"quaerat porro odit\",\n            \"price\": 2355,\n            \"description\": \"Doloremque quibusdam sit cumque fugit. Iure enim ipsum voluptas voluptate eveniet ducimus. Necessitatibus sit facilis ut fugit nesciunt.\\n\\nVoluptate praesentium velit voluptatem quam consectetur. Tempora laborum qui eius delectus officia voluptatum. Sed dolor eaque omnis quaerat quam nesciunt.\\n\\nSoluta ipsam nulla dolorum dolores qui possimus veniam. Vero accusantium optio hic aut voluptatibus vel. Excepturi laborum accusamus architecto quos. Assumenda iste voluptatum voluptatem vitae et ratione. Consectetur sunt omnis voluptatem molestiae.\",\n            \"created_at\": \"2021-05-25T13:34:54.000000Z\",\n            \"updated_at\": \"2021-05-25T13:34:54.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"facilis animi in\",\n            \"price\": 9153,\n            \"description\": \"Quo repudiandae quos est est dolores qui. Consequuntur architecto sequi dignissimos recusandae quas. Sed at dolores officiis dolor veniam ut vitae. Similique rem velit quae. Eius et quasi eligendi necessitatibus esse vitae.\\n\\nTenetur voluptatum cum similique qui sunt corrupti. Quia ducimus exercitationem eligendi ab. Laborum molestiae ullam dicta itaque voluptatum nam. Aperiam maxime atque omnis non dolores sunt.\\n\\nConsequatur amet laudantium perspiciatis dolor asperiores laborum cum. Enim sit harum quia consequatur totam fuga. Eligendi commodi voluptas magnam accusantium enim eum quisquam alias. Minima nihil nihil nisi dolore ut ut sequi laboriosam.\",\n            \"created_at\": \"2021-05-25T13:34:54.000000Z\",\n            \"updated_at\": \"2021-05-25T13:34:54.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"dolor quam natus\",\n            \"price\": 9661,\n            \"description\": \"Alias debitis id aspernatur explicabo. Quia fuga quae numquam voluptates consequuntur veritatis fuga consequuntur. Ea necessitatibus voluptatem provident adipisci sequi sequi iste.\\n\\nId magni totam totam ratione ipsa et. Reiciendis explicabo incidunt enim cum.\\n\\nEnim et ea asperiores facilis. Qui a qui quia et velit assumenda optio. Quia et adipisci in maxime accusamus fuga iure.\",\n            \"created_at\": \"2021-05-25T13:34:54.000000Z\",\n            \"updated_at\": \"2021-05-25T13:34:54.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"est magni perferendis\",\n            \"price\": 4792,\n            \"description\": \"Nulla sunt neque sunt molestiae. Est earum dignissimos accusamus dicta quo. Velit deserunt voluptatibus mollitia. Et qui ducimus saepe eaque eos alias ipsam. Eos itaque debitis ipsum illum reiciendis omnis autem.\\n\\nItaque blanditiis laborum deleniti. Vel quia est odio. Omnis ut mollitia at odio soluta. Adipisci a corrupti quia aut ratione perspiciatis.\\n\\nDolor quod iusto iste est enim quis veniam. Assumenda quia aut nemo et minima aut. Saepe quibusdam ea asperiores provident.\",\n            \"created_at\": \"2021-05-25T13:34:54.000000Z\",\n            \"updated_at\": \"2021-05-25T13:34:54.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"ut et vel\",\n            \"price\": 2631,\n            \"description\": \"Autem expedita rem minus fuga. Aliquam expedita est ipsa cumque expedita ea id. Ad nihil labore non distinctio. Suscipit sed minima quibusdam non quisquam dolor sapiente.\\n\\nSed ad amet et vel qui commodi eveniet. Sunt unde ab sit enim. Voluptas sunt sed aliquam laboriosam aut quisquam.\\n\\nEsse omnis sint libero at natus maxime qui. Consequatur sed sequi sequi iusto dolore. Autem non qui aut tenetur.\",\n            \"created_at\": \"2021-05-25T13:34:54.000000Z\",\n            \"updated_at\": \"2021-05-25T13:34:54.000000Z\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Store a newly created resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dishes",
+                            "query": [
+                                {
+                                    "key": "name",
+                                    "value": "doloremque",
+                                    "description": "Name of dish",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "price",
+                                    "value": "95.9035",
+                                    "description": "Price of dish",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "nihil",
+                                    "description": "Description of dish",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/dishes?name=doloremque&price=95.9035&description=nihil"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Store a newly created resource in storage. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/dishes",
+                                    "query": [
+                                        {
+                                            "key": "name",
+                                            "value": "doloremque",
+                                            "description": "Name of dish",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "price",
+                                            "value": "95.9035",
+                                            "description": "Price of dish",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "description",
+                                            "value": "nihil",
+                                            "description": "Description of dish",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/dishes?name=doloremque&price=95.9035&description=nihil"
+                                },
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"code\": 1,\n    \"data\": {\n        \"name\": \"doloremque\",\n        \"price\": 95.9035,\n        \"description\": \"nihil\",\n        \"updated_at\": \"2021-05-25T13:34:57.000000Z\",\n        \"created_at\": \"2021-05-25T13:34:57.000000Z\",\n        \"id\": 6\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Display the specified resource.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dishes\/:dish",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/dishes\/:dish",
+                            "variable": [
+                                {
+                                    "id": "dish",
+                                    "key": "dish",
+                                    "value": "1",
+                                    "description": "Id of dish."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Display the specified resource. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/dishes\/:dish",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/dishes\/:dish",
+                                    "variable": [
+                                        {
+                                            "id": "dish",
+                                            "key": "dish",
+                                            "value": "1",
+                                            "description": "Id of dish."
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"code\": true,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"quaerat porro odit\",\n        \"price\": 2355,\n        \"description\": \"Doloremque quibusdam sit cumque fugit. Iure enim ipsum voluptas voluptate eveniet ducimus. Necessitatibus sit facilis ut fugit nesciunt.\\n\\nVoluptate praesentium velit voluptatem quam consectetur. Tempora laborum qui eius delectus officia voluptatum. Sed dolor eaque omnis quaerat quam nesciunt.\\n\\nSoluta ipsam nulla dolorum dolores qui possimus veniam. Vero accusantium optio hic aut voluptatibus vel. Excepturi laborum accusamus architecto quos. Assumenda iste voluptatum voluptatem vitae et ratione. Consectetur sunt omnis voluptatem molestiae.\",\n        \"created_at\": \"2021-05-25T13:34:54.000000Z\",\n        \"updated_at\": \"2021-05-25T13:34:54.000000Z\"\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Update the specified resource in storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dishes\/:dish",
+                            "query": [
+                                {
+                                    "key": "name",
+                                    "value": "qui",
+                                    "description": "Name of dish",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "price",
+                                    "value": "1362100.029162",
+                                    "description": "Price of dish",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "description",
+                                    "value": "voluptate",
+                                    "description": "Description of dish",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/dishes\/:dish?name=qui&price=1362100.029162&description=voluptate",
+                            "variable": [
+                                {
+                                    "id": "dish",
+                                    "key": "dish",
+                                    "value": "1",
+                                    "description": "Id of dish."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Update the specified resource in storage. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/dishes\/:dish",
+                                    "query": [
+                                        {
+                                            "key": "name",
+                                            "value": "qui",
+                                            "description": "Name of dish",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "price",
+                                            "value": "1362100.029162",
+                                            "description": "Price of dish",
+                                            "disabled": false
+                                        },
+                                        {
+                                            "key": "description",
+                                            "value": "voluptate",
+                                            "description": "Description of dish",
+                                            "disabled": false
+                                        }
+                                    ],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/dishes\/:dish?name=qui&price=1362100.029162&description=voluptate",
+                                    "variable": [
+                                        {
+                                            "id": "dish",
+                                            "key": "dish",
+                                            "value": "1",
+                                            "description": "Id of dish."
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"code\": 1,\n    \"data\": {\n        \"name\": \"qui\",\n        \"price\": 1362100.029162,\n        \"description\": \"voluptate\",\n        \"updated_at\": \"2021-05-25T13:34:57.000000Z\",\n        \"created_at\": \"2021-05-25T13:34:57.000000Z\",\n        \"id\": 7\n    }\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Remove the specified resource from storage.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/dishes\/:dish",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/dishes\/:dish",
+                            "variable": [
+                                {
+                                    "id": "dish",
+                                    "key": "dish",
+                                    "value": "1",
+                                    "description": "Id of dish."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "Remove the specified resource from storage. Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/dishes\/:dish",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/dishes\/:dish",
+                                    "variable": [
+                                        {
+                                            "id": "dish",
+                                            "key": "dish",
+                                            "value": "1",
+                                            "description": "Id of dish."
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"code\": 1\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "name": "api\/login Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/login",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/login"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": ""
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"code\": 0\n}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "bearer"
+    }
+}

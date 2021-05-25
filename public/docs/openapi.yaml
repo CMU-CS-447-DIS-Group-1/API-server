@@ -1,0 +1,421 @@
+openapi: 3.0.3
+info:
+    title: Laravel
+    description: 'API document for Restaurant Manamgement System'
+    version: 1.0.0
+servers:
+    -
+        url: 'http://restaurant-api.test'
+paths:
+    /api/login:
+        post:
+            summary: 'Login API'
+            description: ''
+            parameters:
+                -
+                    in: query
+                    name: email
+                    description: required.
+                    example: example@example.org
+                    required: false
+                    schema:
+                        type: string
+                        description: required.
+                        example: example@example.org
+                -
+                    in: query
+                    name: password
+                    description: required.
+                    example: password
+                    required: false
+                    schema:
+                        type: string
+                        description: required.
+                        example: password
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    code: 1
+                                    api_token: ywa0uHEnxLPMSZO71A8AQv1p3KbJ6z1Hfz1WtQScNbz2HjfD9GOA61kuniie
+                                    user_info: { id: 1, name: 'Kiara Marvin MD', email: example@example.org, level: 0, api_token: ywa0uHEnxLPMSZO71A8AQv1p3KbJ6z1Hfz1WtQScNbz2HjfD9GOA61kuniie, created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:57.000000Z' }
+                                properties:
+                                    code: { type: integer, example: 1 }
+                                    api_token: { type: string, example: ywa0uHEnxLPMSZO71A8AQv1p3KbJ6z1Hfz1WtQScNbz2HjfD9GOA61kuniie }
+                                    user_info: { type: object, example: { id: 1, name: 'Kiara Marvin MD', email: example@example.org, level: 0, api_token: ywa0uHEnxLPMSZO71A8AQv1p3KbJ6z1Hfz1WtQScNbz2HjfD9GOA61kuniie, created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:57.000000Z' } }
+            tags:
+                - 'Auth API'
+            security: []
+        get:
+            summary: ''
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    code: 0
+                                properties:
+                                    code: { type: integer, example: 0 }
+            tags:
+                - Endpoints
+    /api/logout:
+        get:
+            summary: 'Logout API'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    code: 1
+                                properties:
+                                    code: { type: integer, example: 1 }
+            tags:
+                - 'Auth API'
+    /api/dishes:
+        get:
+            summary: 'Display a listing of the resource.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    code: 1
+                                    data: [{ id: 1, name: 'quaerat porro odit', price: 2355, description: "Doloremque quibusdam sit cumque fugit. Iure enim ipsum voluptas voluptate eveniet ducimus. Necessitatibus sit facilis ut fugit nesciunt.\n\nVoluptate praesentium velit voluptatem quam consectetur. Tempora laborum qui eius delectus officia voluptatum. Sed dolor eaque omnis quaerat quam nesciunt.\n\nSoluta ipsam nulla dolorum dolores qui possimus veniam. Vero accusantium optio hic aut voluptatibus vel. Excepturi laborum accusamus architecto quos. Assumenda iste voluptatum voluptatem vitae et ratione. Consectetur sunt omnis voluptatem molestiae.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }, { id: 2, name: 'facilis animi in', price: 9153, description: "Quo repudiandae quos est est dolores qui. Consequuntur architecto sequi dignissimos recusandae quas. Sed at dolores officiis dolor veniam ut vitae. Similique rem velit quae. Eius et quasi eligendi necessitatibus esse vitae.\n\nTenetur voluptatum cum similique qui sunt corrupti. Quia ducimus exercitationem eligendi ab. Laborum molestiae ullam dicta itaque voluptatum nam. Aperiam maxime atque omnis non dolores sunt.\n\nConsequatur amet laudantium perspiciatis dolor asperiores laborum cum. Enim sit harum quia consequatur totam fuga. Eligendi commodi voluptas magnam accusantium enim eum quisquam alias. Minima nihil nihil nisi dolore ut ut sequi laboriosam.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }, { id: 3, name: 'dolor quam natus', price: 9661, description: "Alias debitis id aspernatur explicabo. Quia fuga quae numquam voluptates consequuntur veritatis fuga consequuntur. Ea necessitatibus voluptatem provident adipisci sequi sequi iste.\n\nId magni totam totam ratione ipsa et. Reiciendis explicabo incidunt enim cum.\n\nEnim et ea asperiores facilis. Qui a qui quia et velit assumenda optio. Quia et adipisci in maxime accusamus fuga iure.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }, { id: 4, name: 'est magni perferendis', price: 4792, description: "Nulla sunt neque sunt molestiae. Est earum dignissimos accusamus dicta quo. Velit deserunt voluptatibus mollitia. Et qui ducimus saepe eaque eos alias ipsam. Eos itaque debitis ipsum illum reiciendis omnis autem.\n\nItaque blanditiis laborum deleniti. Vel quia est odio. Omnis ut mollitia at odio soluta. Adipisci a corrupti quia aut ratione perspiciatis.\n\nDolor quod iusto iste est enim quis veniam. Assumenda quia aut nemo et minima aut. Saepe quibusdam ea asperiores provident.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }, { id: 5, name: 'ut et vel', price: 2631, description: "Autem expedita rem minus fuga. Aliquam expedita est ipsa cumque expedita ea id. Ad nihil labore non distinctio. Suscipit sed minima quibusdam non quisquam dolor sapiente.\n\nSed ad amet et vel qui commodi eveniet. Sunt unde ab sit enim. Voluptas sunt sed aliquam laboriosam aut quisquam.\n\nEsse omnis sint libero at natus maxime qui. Consequatur sed sequi sequi iusto dolore. Autem non qui aut tenetur.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }]
+                                properties:
+                                    code: { type: integer, example: 1 }
+                                    data: { type: array, example: [{ id: 1, name: 'quaerat porro odit', price: 2355, description: "Doloremque quibusdam sit cumque fugit. Iure enim ipsum voluptas voluptate eveniet ducimus. Necessitatibus sit facilis ut fugit nesciunt.\n\nVoluptate praesentium velit voluptatem quam consectetur. Tempora laborum qui eius delectus officia voluptatum. Sed dolor eaque omnis quaerat quam nesciunt.\n\nSoluta ipsam nulla dolorum dolores qui possimus veniam. Vero accusantium optio hic aut voluptatibus vel. Excepturi laborum accusamus architecto quos. Assumenda iste voluptatum voluptatem vitae et ratione. Consectetur sunt omnis voluptatem molestiae.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }, { id: 2, name: 'facilis animi in', price: 9153, description: "Quo repudiandae quos est est dolores qui. Consequuntur architecto sequi dignissimos recusandae quas. Sed at dolores officiis dolor veniam ut vitae. Similique rem velit quae. Eius et quasi eligendi necessitatibus esse vitae.\n\nTenetur voluptatum cum similique qui sunt corrupti. Quia ducimus exercitationem eligendi ab. Laborum molestiae ullam dicta itaque voluptatum nam. Aperiam maxime atque omnis non dolores sunt.\n\nConsequatur amet laudantium perspiciatis dolor asperiores laborum cum. Enim sit harum quia consequatur totam fuga. Eligendi commodi voluptas magnam accusantium enim eum quisquam alias. Minima nihil nihil nisi dolore ut ut sequi laboriosam.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }, { id: 3, name: 'dolor quam natus', price: 9661, description: "Alias debitis id aspernatur explicabo. Quia fuga quae numquam voluptates consequuntur veritatis fuga consequuntur. Ea necessitatibus voluptatem provident adipisci sequi sequi iste.\n\nId magni totam totam ratione ipsa et. Reiciendis explicabo incidunt enim cum.\n\nEnim et ea asperiores facilis. Qui a qui quia et velit assumenda optio. Quia et adipisci in maxime accusamus fuga iure.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }, { id: 4, name: 'est magni perferendis', price: 4792, description: "Nulla sunt neque sunt molestiae. Est earum dignissimos accusamus dicta quo. Velit deserunt voluptatibus mollitia. Et qui ducimus saepe eaque eos alias ipsam. Eos itaque debitis ipsum illum reiciendis omnis autem.\n\nItaque blanditiis laborum deleniti. Vel quia est odio. Omnis ut mollitia at odio soluta. Adipisci a corrupti quia aut ratione perspiciatis.\n\nDolor quod iusto iste est enim quis veniam. Assumenda quia aut nemo et minima aut. Saepe quibusdam ea asperiores provident.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }, { id: 5, name: 'ut et vel', price: 2631, description: "Autem expedita rem minus fuga. Aliquam expedita est ipsa cumque expedita ea id. Ad nihil labore non distinctio. Suscipit sed minima quibusdam non quisquam dolor sapiente.\n\nSed ad amet et vel qui commodi eveniet. Sunt unde ab sit enim. Voluptas sunt sed aliquam laboriosam aut quisquam.\n\nEsse omnis sint libero at natus maxime qui. Consequatur sed sequi sequi iusto dolore. Autem non qui aut tenetur.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }], items: { type: object } }
+            tags:
+                - 'Dish API'
+        post:
+            summary: 'Store a newly created resource in storage.'
+            description: ''
+            parameters:
+                -
+                    in: query
+                    name: name
+                    description: 'Name of dish'
+                    example: doloremque
+                    required: false
+                    schema:
+                        type: string
+                        description: 'Name of dish'
+                        example: doloremque
+                -
+                    in: query
+                    name: price
+                    description: 'Price of dish'
+                    example: 95.9035
+                    required: false
+                    schema:
+                        type: number
+                        description: 'Price of dish'
+                        example: 95.9035
+                -
+                    in: query
+                    name: description
+                    description: 'Description of dish'
+                    example: nihil
+                    required: false
+                    schema:
+                        type: string
+                        description: 'Description of dish'
+                        example: nihil
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    code: 1
+                                    data: { name: doloremque, price: 95.9035, description: nihil, updated_at: '2021-05-25T13:34:57.000000Z', created_at: '2021-05-25T13:34:57.000000Z', id: 6 }
+                                properties:
+                                    code: { type: integer, example: 1 }
+                                    data: { type: object, example: { name: doloremque, price: 95.9035, description: nihil, updated_at: '2021-05-25T13:34:57.000000Z', created_at: '2021-05-25T13:34:57.000000Z', id: 6 } }
+            tags:
+                - 'Dish API'
+    '/api/dishes/{dish}':
+        get:
+            summary: 'Display the specified resource.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    code: true
+                                    data: { id: 1, name: 'quaerat porro odit', price: 2355, description: "Doloremque quibusdam sit cumque fugit. Iure enim ipsum voluptas voluptate eveniet ducimus. Necessitatibus sit facilis ut fugit nesciunt.\n\nVoluptate praesentium velit voluptatem quam consectetur. Tempora laborum qui eius delectus officia voluptatum. Sed dolor eaque omnis quaerat quam nesciunt.\n\nSoluta ipsam nulla dolorum dolores qui possimus veniam. Vero accusantium optio hic aut voluptatibus vel. Excepturi laborum accusamus architecto quos. Assumenda iste voluptatum voluptatem vitae et ratione. Consectetur sunt omnis voluptatem molestiae.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' }
+                                properties:
+                                    code: { type: boolean, example: true }
+                                    data: { type: object, example: { id: 1, name: 'quaerat porro odit', price: 2355, description: "Doloremque quibusdam sit cumque fugit. Iure enim ipsum voluptas voluptate eveniet ducimus. Necessitatibus sit facilis ut fugit nesciunt.\n\nVoluptate praesentium velit voluptatem quam consectetur. Tempora laborum qui eius delectus officia voluptatum. Sed dolor eaque omnis quaerat quam nesciunt.\n\nSoluta ipsam nulla dolorum dolores qui possimus veniam. Vero accusantium optio hic aut voluptatibus vel. Excepturi laborum accusamus architecto quos. Assumenda iste voluptatum voluptatem vitae et ratione. Consectetur sunt omnis voluptatem molestiae.", created_at: '2021-05-25T13:34:54.000000Z', updated_at: '2021-05-25T13:34:54.000000Z' } }
+            tags:
+                - 'Dish API'
+        put:
+            summary: 'Update the specified resource in storage.'
+            description: ''
+            parameters:
+                -
+                    in: query
+                    name: name
+                    description: 'Name of dish'
+                    example: qui
+                    required: true
+                    schema:
+                        type: string
+                        description: 'Name of dish'
+                        example: qui
+                -
+                    in: query
+                    name: price
+                    description: 'Price of dish'
+                    example: 1362100.029162
+                    required: true
+                    schema:
+                        type: number
+                        description: 'Price of dish'
+                        example: 1362100.029162
+                -
+                    in: query
+                    name: description
+                    description: 'Description of dish'
+                    example: voluptate
+                    required: false
+                    schema:
+                        type: string
+                        description: 'Description of dish'
+                        example: voluptate
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    code: 1
+                                    data: { name: qui, price: 1362100.029162, description: voluptate, updated_at: '2021-05-25T13:34:57.000000Z', created_at: '2021-05-25T13:34:57.000000Z', id: 7 }
+                                properties:
+                                    code: { type: integer, example: 1 }
+                                    data: { type: object, example: { name: qui, price: 1362100.029162, description: voluptate, updated_at: '2021-05-25T13:34:57.000000Z', created_at: '2021-05-25T13:34:57.000000Z', id: 7 } }
+            tags:
+                - 'Dish API'
+        delete:
+            summary: 'Remove the specified resource from storage.'
+            description: ''
+            parameters:
+                -
+                    in: header
+                    name: Authorization
+                    description: ''
+                    example: 'Bearer ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn'
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: '200'
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    code: 1
+                                properties:
+                                    code: { type: integer, example: 1 }
+            tags:
+                - 'Dish API'
+        parameters:
+            -
+                in: path
+                name: dish
+                description: 'Id of dish.'
+                example: 1
+                required: true
+                schema:
+                    type: integer
+components:
+    securitySchemes:
+        default:
+            type: http
+            scheme: bearer
+            description: ''
+security:
+    -
+        default: []
