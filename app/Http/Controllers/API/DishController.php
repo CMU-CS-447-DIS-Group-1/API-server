@@ -20,7 +20,10 @@ class DishController extends Controller
     {
         $data = Dish::all();
 
-        return response()->json($data);
+        return response()->json([
+            'code' => 1,
+            'data' => $data,
+        ]);
     }
 
     /**
@@ -48,7 +51,7 @@ class DishController extends Controller
             ]);
         }
 
-        return json_encode([
+        return response()->json([
             'code' => 0,
         ]);
     }
@@ -89,16 +92,12 @@ class DishController extends Controller
     public function update(Request $request, $id)
     {
         $request = $request->only('name', 'price', 'description');
-        if (isset($request['name']) && isset($request['price'])) {
-            $data = Dish::create([
-                'name' => $request['name'],
-                'price' => $request['price'],
-                'description' => $request['description'],
-            ]);
+        $data = Dish::where('id', $id);
+        if ($data != null && (isset($request['name']) || isset($request['price']) || isset($request['description']))) {
+            $data->update($request);
 
             return response()->json([
                 'code' => 1,
-                'data' => $data,
             ]);
         }
 
