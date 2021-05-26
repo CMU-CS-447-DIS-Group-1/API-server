@@ -7,6 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Website
+
+API url: [http://res.khodata.xyz/api](http://res.khodata.xyz/api)
+Read API document [here](http://res.khodata.xyz/api)
+
 ## Requirements
 
 - [Composer](https://getcomposer.org/)
