@@ -24,20 +24,22 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $request = $request->only('email', 'password');
-        $output['code'] = 0;
         if (Auth::attempt(['email' => $request['email'], 'password' => $request['password']])) {
             $api_token = Str::random(60);
             $user = Auth::user();
             $user->api_token = $api_token;
             $user->save();
-            $output = [
+
+            return response()->json([
                 'code' => 1,
                 'api_token' => $api_token,
                 'user_info' => Auth::user(),
-            ];
+            ]);
         }
 
-        return json_encode($output);
+        return response()->json([
+            'code' => 0,
+        ]);
     }
 
     /**
@@ -47,14 +49,18 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        $output['code'] = 0;
         if (Auth::check()) {
             $user = Auth::user();
             $user->api_token = null;
             $user->save();
-            $output['code'] = 1;
+
+            return response()->json([
+                'code' => 1,
+            ]);
         }
 
-        return json_encode($output);
+        return response()->json([
+            'code' => 0,
+        ]);
     }
 }

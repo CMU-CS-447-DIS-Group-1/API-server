@@ -20,10 +20,7 @@ class DishController extends Controller
     {
         $data = Dish::all();
 
-        return json_encode([
-            'code' => 1,
-            'data' => $data,
-        ]);
+        return response()->json($data);
     }
 
     /**
@@ -45,7 +42,7 @@ class DishController extends Controller
                 'description' => $request['description'],
             ]);
 
-            return json_encode([
+            return response()->json([
                 'code' => 1,
                 'data' => $data,
             ]);
@@ -67,13 +64,13 @@ class DishController extends Controller
     {
         $dish = Dish::find($id);
         if ($dish != null) {
-            return json_encode([
+            return response()->json([
                 'code' => $dish != null,
                 'data' => $dish,
             ]);
         }
 
-        return json_encode([
+        return response()->json([
             'code' => 0,
         ]);
     }
@@ -99,13 +96,13 @@ class DishController extends Controller
                 'description' => $request['description'],
             ]);
 
-            return json_encode([
+            return response()->json([
                 'code' => 1,
                 'data' => $data,
             ]);
         }
 
-        return json_encode([
+        return response()->json([
             'code' => 0,
         ]);
     }
@@ -122,7 +119,7 @@ class DishController extends Controller
      */
     public function destroy($id)
     {
-        return json_encode([
+        return response()->json([
             'code' => Dish::destroy($id),
         ]);
     }
