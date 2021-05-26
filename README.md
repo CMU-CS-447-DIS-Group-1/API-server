@@ -44,6 +44,9 @@ npm run dev
   - DB_DATABASE: MySQL Database name
   - DB_USERNAME: MySQL Database username
   - DB_PASSWORD: MySQL Database password
+  
+#### XAMPP, Laragon, etc
+
 - Migrate database & seed data
 
 ```bash
@@ -55,6 +58,10 @@ php artisan migrate --seed
 ```bash
 php artisan key:generate
 ```
+
+#### Hosting
+
+- Import data1.sql > data2.sql > data3.sql
 
 ### After pulled, updated code
 
