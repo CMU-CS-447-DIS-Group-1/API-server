@@ -63,18 +63,34 @@ class DishController extends Controller
      * @param  int                         $id
      * @return \Illuminate\Http\Response
      */
+    // public function show($id)
+    // {
+    //     $dish = Dish::find($id);
+    //     if ($dish != null) {
+    //         return response()->json([
+    //             'code' => $dish != null,
+    //             'data' => $dish,
+    //         ]);
+    //     }
+
+    //     return response()->json([
+    //         'code' => 0,
+    //     ]);
+    // }
+
+    // id = name want to search
     public function show($id)
     {
-        $dish = Dish::find($id);
-        if ($dish != null) {
+        $dish = Dish::where('name', 'LIKE', '%'.$id.'%');
+        if ($dish->count() != 0) {
             return response()->json([
-                'code' => $dish != null,
-                'data' => $dish,
+                'code' => 1,
+                'data' => $dish->get(),
             ]);
         }
 
         return response()->json([
-            'code' => 0,
+            'code' => 2,
         ]);
     }
 

@@ -13,11 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('login', function () {
-    return json_encode(['code' => 0]);
+    return response()->json([
+        'code' => 0,
+        'message' => 'Chưa đăng nhập',
+    ]);
 })->name('login');
 Route::post('login', [App\Http\Controllers\API\AuthController::class, 'login']);
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::get('logout', [App\Http\Controllers\API\AuthController::class, 'logout']);
     Route::apiResource('dishes', App\Http\Controllers\API\DishController::class);
+    Route::get('select/table', [App\Http\Controllers\API\SelectController::class, 'getTable']);
+    Route::post('select/table', [App\Http\Controllers\API\SelectController::class, 'selectTable']);
+    Route::post('select/table/{table}', [App\Http\Controllers\API\SelectController::class, 'order']);
 });
