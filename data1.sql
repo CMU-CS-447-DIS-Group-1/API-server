@@ -20,17 +20,16 @@ CREATE TABLE IF NOT EXISTS `dishes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table restaurant.dishes: ~5 rows (approximately)
-DELETE FROM `dishes`;
 /*!40000 ALTER TABLE `dishes` DISABLE KEYS */;
 INSERT INTO `dishes` (`id`, `name`, `price`, `description`, `created_at`, `updated_at`) VALUES
-	(1, 'quaerat porro odit', 2355, 'Doloremque quibusdam sit cumque fugit. Iure enim ipsum voluptas voluptate eveniet ducimus. Necessitatibus sit facilis ut fugit nesciunt.\n\nVoluptate praesentium velit voluptatem quam consectetur. Tempora laborum qui eius delectus officia voluptatum. Sed dolor eaque omnis quaerat quam nesciunt.\n\nSoluta ipsam nulla dolorum dolores qui possimus veniam. Vero accusantium optio hic aut voluptatibus vel. Excepturi laborum accusamus architecto quos. Assumenda iste voluptatum voluptatem vitae et ratione. Consectetur sunt omnis voluptatem molestiae.', '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(2, 'facilis animi in', 9153, 'Quo repudiandae quos est est dolores qui. Consequuntur architecto sequi dignissimos recusandae quas. Sed at dolores officiis dolor veniam ut vitae. Similique rem velit quae. Eius et quasi eligendi necessitatibus esse vitae.\n\nTenetur voluptatum cum similique qui sunt corrupti. Quia ducimus exercitationem eligendi ab. Laborum molestiae ullam dicta itaque voluptatum nam. Aperiam maxime atque omnis non dolores sunt.\n\nConsequatur amet laudantium perspiciatis dolor asperiores laborum cum. Enim sit harum quia consequatur totam fuga. Eligendi commodi voluptas magnam accusantium enim eum quisquam alias. Minima nihil nihil nisi dolore ut ut sequi laboriosam.', '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(3, 'dolor quam natus', 9661, 'Alias debitis id aspernatur explicabo. Quia fuga quae numquam voluptates consequuntur veritatis fuga consequuntur. Ea necessitatibus voluptatem provident adipisci sequi sequi iste.\n\nId magni totam totam ratione ipsa et. Reiciendis explicabo incidunt enim cum.\n\nEnim et ea asperiores facilis. Qui a qui quia et velit assumenda optio. Quia et adipisci in maxime accusamus fuga iure.', '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(4, 'est magni perferendis', 4792, 'Nulla sunt neque sunt molestiae. Est earum dignissimos accusamus dicta quo. Velit deserunt voluptatibus mollitia. Et qui ducimus saepe eaque eos alias ipsam. Eos itaque debitis ipsum illum reiciendis omnis autem.\n\nItaque blanditiis laborum deleniti. Vel quia est odio. Omnis ut mollitia at odio soluta. Adipisci a corrupti quia aut ratione perspiciatis.\n\nDolor quod iusto iste est enim quis veniam. Assumenda quia aut nemo et minima aut. Saepe quibusdam ea asperiores provident.', '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(5, 'ut et vel', 2631, 'Autem expedita rem minus fuga. Aliquam expedita est ipsa cumque expedita ea id. Ad nihil labore non distinctio. Suscipit sed minima quibusdam non quisquam dolor sapiente.\n\nSed ad amet et vel qui commodi eveniet. Sunt unde ab sit enim. Voluptas sunt sed aliquam laboriosam aut quisquam.\n\nEsse omnis sint libero at natus maxime qui. Consequatur sed sequi sequi iusto dolore. Autem non qui aut tenetur.', '2021-05-25 13:34:54', '2021-05-25 13:34:54');
+	(1, 'qui sit alias', 2209, 'Rerum id aperiam error at id qui. Est quis delectus neque et itaque nihil. Ut debitis officiis dolor itaque repellat ut dicta. Voluptatem excepturi deserunt minus qui enim.\n\nReiciendis maiores totam nemo consectetur ut est. Voluptas aut amet quod necessitatibus tenetur hic qui. Optio eveniet exercitationem officiis quos.\n\nPariatur magnam earum dolores dolores assumenda molestias. Aut eos earum in quasi. Quasi qui molestiae sint hic. Voluptas expedita sit id dolores officia laborum omnis.', '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(2, 'rem vitae minus', 8157, 'Et laudantium in quis et at. Repudiandae magnam aspernatur debitis sunt deserunt et voluptas. Voluptatibus animi facilis est soluta ea. Consequuntur quis aut dolores nam eius atque.\n\nEst tempora tempora numquam est nesciunt libero sed. Excepturi enim aut quod magnam. Enim architecto quasi sunt pariatur aut est eveniet.\n\nVel id molestiae dolore eligendi in vel eum. Magni expedita voluptates eos voluptatibus molestias quia. Illum voluptates sit voluptatem quaerat. Laboriosam quas eos quas ea.', '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(3, 'beatae delectus ut', 3462, 'Qui hic iste aut architecto fugiat. Corporis quibusdam ut modi doloribus. Dolorem porro consequatur similique aperiam.\n\nAperiam labore et qui vel. Tempore aperiam voluptatibus commodi et omnis ut. Natus veritatis architecto et aut sit doloremque distinctio.\n\nQuasi velit quia reiciendis. Labore enim praesentium reprehenderit incidunt aliquam non. Eveniet magni quibusdam architecto et itaque ad aut rerum. Exercitationem ipsa sint officiis est commodi. Eum corrupti placeat quia placeat.', '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(4, 'nihil dicta quaerat', 5816, 'Esse suscipit laboriosam incidunt eius est ut quasi. Officia fugiat quos unde deserunt voluptatibus. Ut est ut et ut nam. Nesciunt aut qui sint eius ut maxime vero. Autem qui eius tempora debitis recusandae.\n\nUt nam et consectetur. Consequatur sed sunt in ducimus non facilis maiores architecto. Modi sint beatae quidem est maiores atque quibusdam. Quia neque mollitia dicta error dignissimos necessitatibus eum.\n\nRepellat velit voluptatum aut laboriosam aut illum. Distinctio voluptatum quidem placeat dolor quis quaerat ipsam aut. In blanditiis sit magni alias. Eaque suscipit fugiat iusto voluptas.', '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(5, 'et vel sed', 8579, 'Non totam voluptas aliquam maxime sed. Aperiam laboriosam aut voluptas incidunt eius. Fugiat fugiat autem repudiandae ea ad eaque. Id fugit eos perspiciatis porro dolorum sit magni.\n\nVel ea quod totam tempore quia. Fugit dicta dolorem nemo et numquam. Iure asperiores aut ratione occaecati ut quibusdam aut.\n\nEt sapiente vero aliquam ut in itaque beatae. Error ipsam corrupti cum deleniti voluptatem ipsum aut qui. Iste laborum facere quisquam fuga. Et corporis ratione sed sit consectetur fuga magnam.', '2021-06-10 02:58:24', '2021-06-10 02:58:24');
 /*!40000 ALTER TABLE `dishes` ENABLE KEYS */;
 
 -- Dumping structure for table restaurant.migrations
@@ -39,17 +38,16 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=141 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table restaurant.migrations: ~5 rows (approximately)
-DELETE FROM `migrations`;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-	(61, '2014_10_12_000000_create_users_table', 1),
-	(62, '2021_05_17_100128_create_dishes_table', 1),
-	(63, '2021_05_19_041830_create_tables_table', 1),
-	(64, '2021_05_19_041938_create_invoices_table', 1),
-	(65, '2021_05_19_042240_create_invoice_dishes_table', 1);
+	(136, '2014_10_12_000000_create_users_table', 1),
+	(137, '2021_05_17_100128_create_dishes_table', 1),
+	(138, '2021_05_19_041830_create_tables_table', 1),
+	(139, '2021_05_19_041938_create_invoices_table', 1),
+	(140, '2021_05_19_042240_create_invoice_dishes_table', 1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 
 -- Dumping structure for table restaurant.tables
@@ -57,25 +55,25 @@ CREATE TABLE IF NOT EXISTS `tables` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `code` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `tables_code_unique` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table restaurant.tables: ~12 rows (approximately)
-DELETE FROM `tables`;
 /*!40000 ALTER TABLE `tables` DISABLE KEYS */;
 INSERT INTO `tables` (`id`, `code`, `status`) VALUES
-	(1, 'O9yavayytP', 0),
-	(2, 'PPkzqKeOcF', 0),
-	(3, 'LXmhFhyMnf', 0),
-	(4, 'vHoeNBiu7c', 0),
-	(5, '5WkdnRBRXY', 0),
-	(6, 'SLfApIaEuK', 0),
-	(7, 'jjVpZhbOPP', 0),
-	(8, 'WsbIUNta11', 0),
-	(9, 'Cq93oqIwmg', 0),
-	(10, 'AVFya1pMPq', 0),
-	(11, 'vt5Klyd0pV', 0),
-	(12, 'DgKWHHNDpY', 0);
+	(1, '4aML4CYuwm', 0),
+	(2, 'U8oIYrriDZ', 0),
+	(3, 'OQGNUQndKL', 0),
+	(4, 'gsjhtM5So1', 0),
+	(5, '3VObRVmnuo', 0),
+	(6, 'MC3iJrZNe6', 0),
+	(7, 'imxssIol81', 0),
+	(8, 'YNYv9A6JVD', 0),
+	(9, 'v1AIeyY1hh', 0),
+	(10, 'vyJ9RFfwBW', 0),
+	(11, 'nwvmgZXmDw', 0),
+	(12, 'PyJ3Bg43ZA', 0);
 /*!40000 ALTER TABLE `tables` ENABLE KEYS */;
 
 -- Dumping structure for table restaurant.users
@@ -93,20 +91,19 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `users_api_token_unique` (`api_token`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table restaurant.users: ~10 rows (approximately)
-DELETE FROM `users`;
+-- Dumping data for table restaurant.users: ~11 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `level`, `api_token`, `created_at`, `updated_at`) VALUES
-	(1, 'Kiara Marvin MD', 'example@example.org', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn', '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(2, 'Olen Huels', 'lyric60@example.net', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(3, 'Miss Hannah Rosenbaum MD', 'ziemann.matt@example.org', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(4, 'Nicholaus Bahringer', 'jamal.upton@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(5, 'Ms. Neva Rogahn', 'littel.abigayle@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(6, 'Ellis Schultz DVM', 'frederick85@example.net', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(7, 'Sasha Botsford', 'ostoltenberg@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(8, 'Oma Halvorson', 'winston.kutch@example.org', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(9, 'Penelope White', 'tparker@example.net', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-05-25 13:34:54', '2021-05-25 13:34:54'),
-	(10, 'Prof. Mattie Ryan', 'katherine23@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-05-25 13:34:54', '2021-05-25 13:34:54');
+	(1, 'Alverta Paucek DVM', 'manager@example.org', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, 'ygcz4HbaTiOLQyAHw8HxO0HI920u6UPiC4VhGn8H1c2jiMCcgLlcHC9pzbKn', '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(2, 'Billie Jerde DVM', 'cashier@example.org', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 1, NULL, '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(3, 'Marcel Dare', 'ezekiel.conn@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(4, 'Mrs. Jannie Swift', 'marianna06@example.org', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(5, 'Horacio Johns II', 'marcelino.stark@example.net', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(6, 'Dr. Forrest Witting IV', 'pgreenfelder@example.net', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(7, 'Jadyn Barrows', 'leann44@example.org', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(8, 'Dr. Clarabelle Heathcote', 'cesar02@example.net', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(9, 'Cicero Pfeffer III', 'berge.sandrine@example.net', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-06-10 02:58:24', '2021-06-10 02:58:24'),
+	(10, 'Monte Kovacek', 'cbatz@example.org', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 0, NULL, '2021-06-10 02:58:24', '2021-06-10 02:58:24');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

@@ -61,7 +61,7 @@ php artisan key:generate
 
 #### Hosting
 
-- Import data1.sql > data2.sql > data3.sql
+- Import data1.sql > data2.sql
 
 ### After pulled, updated code
 
@@ -89,7 +89,8 @@ php artisan serve
 - If you are using Laragon, then your website will be at [localhost](http://localhost) or [projectfolder.test](projectname.test)
 - If you are not, then your website will be at [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - You can login with the following account:
-  - email: example@example.org | password: password
+  - email: manager@example.org | password: password | Level: Manager
+  - email: cashier@example.org | password: password | Level: Cashier
 
 - For API document, go to [projectfolder.test/docs](projectname.test/docs)
 
