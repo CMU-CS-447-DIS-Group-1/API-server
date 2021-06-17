@@ -25,7 +25,7 @@ class Invoice extends Model
      */
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class);
     }
 
     /**
@@ -41,6 +41,6 @@ class Invoice extends Model
      */
     public function dishes()
     {
-        return $this->hasManyThrough(Dish::class, InvoiceDishes::class);
+        return $this->hasMany(InvoiceDishes::class);
     }
 }

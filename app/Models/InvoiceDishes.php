@@ -20,13 +20,16 @@ class InvoiceDishes extends Model
         'quantity',
         'price',
     ];
+    protected $with = [
+        'dish',
+    ];
 
     /**
      * Get invoice information
      */
     public function invoice()
     {
-        return $this->hasOne(Invoice::class);
+        return $this->belongsTo(Invoice::class);
     }
 
     /**
@@ -34,6 +37,6 @@ class InvoiceDishes extends Model
      */
     public function dish()
     {
-        return $this->hasOne(Dish::class);
+        return $this->belongsTo(Dish::class);
     }
 }
