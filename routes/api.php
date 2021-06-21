@@ -20,14 +20,15 @@ Route::get('login', function () {
 })->name('login');
 Route::post('login', [App\Http\Controllers\API\AuthController::class, 'login']);
 
+Route::apiResource('dishes', App\Http\Controllers\API\DishController::class);
+Route::post('select/table', [App\Http\Controllers\API\SelectController::class, 'selectTable']);
+Route::post('select/table/{table}', [App\Http\Controllers\API\SelectController::class, 'order']);
+Route::get('select/invoice/{table}', [App\Http\Controllers\API\InvoiceController::class, 'view']);
+
 Route::group(['middleware' => 'auth:api'], function () {
     Route::get('logout', [App\Http\Controllers\API\AuthController::class, 'logout']);
-    Route::apiResource('dishes', App\Http\Controllers\API\DishController::class);
     Route::get('select/table', [App\Http\Controllers\API\SelectController::class, 'getTable']);
-    Route::post('select/table', [App\Http\Controllers\API\SelectController::class, 'selectTable']);
-    Route::post('select/table/{table}', [App\Http\Controllers\API\SelectController::class, 'order']);
     Route::get('select/invoices/{table}', [App\Http\Controllers\API\InvoiceController::class, 'show']);
     Route::get('select/invoice', [App\Http\Controllers\API\InvoiceController::class, 'index']);
-    Route::get('select/invoice/{table}', [App\Http\Controllers\API\InvoiceController::class, 'view']);
     Route::post('select/invoice/{table}', [App\Http\Controllers\API\InvoiceController::class, 'print']);
 });
