@@ -38,7 +38,7 @@ class DishController extends Controller
     public function store(Request $request)
     {
         $request = $request->only('name', 'price', 'description');
-        if (isset($request['name']) && isset($request['price'])) {
+        if (isset($request['name']) && isset($request['price']) && $request['price'] >= 0) {
             $data = Dish::create([
                 'name' => $request['name'],
                 'price' => $request['price'],

@@ -24,9 +24,9 @@ class DatabaseSeeder extends Seeder
         ]);
         \App\Models\User::factory(8)->create();
         $this->call([
-            DishSeeder::class,
+            // DishSeeder::class,
             TableSeeder::class,
-            InvoiceSeeder::class,
+            // InvoiceSeeder::class,
         ]);
     }
 }
